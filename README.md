@@ -3,7 +3,7 @@ Election Blockchain Project
 
 
 * Clone the repository:
-  * ```$ git clone https://github.com/shoaibhusain-eng/NFT-Marketplace.git ```
+  * ```$ git clone https://github.com/shoaibhusain-eng/Election-Blockchain-Project.git ```
 
 
 Now go to project folder and run:

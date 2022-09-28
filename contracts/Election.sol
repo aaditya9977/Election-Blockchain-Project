@@ -63,13 +63,24 @@ contract Election {
 
 
      function winner () public view returns(string memory winnerNameString) {
+         uint maxVot = 0;
+         uint secondMaxVot = 0;
+         string memory winnerName = '';
+
           for(uint i =0; i <= candidatesCount; i++ ){
-             if(candidates[i].voteCount >= 5){
-               // return string.concat("this person is the winner ", candidates[i].name);
-               return candidates[i].name;
+              if(candidates[i].voteCount >= maxVot){
+                  secondMaxVot = maxVot;
+                  maxVot = candidates[i].voteCount;
+                  winnerName = candidates[i].name;
+              }
+            }
+
+          if(maxVot >= 2 && maxVot != secondMaxVot ){
+               return winnerName;
+           }else{
+                return "Winner is not select";
            }
-        }
-     return "Winner is not select";
+
      }
 
 
